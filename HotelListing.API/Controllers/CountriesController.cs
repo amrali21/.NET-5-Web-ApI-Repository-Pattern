@@ -100,7 +100,7 @@ namespace HotelListing.API.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<Country>> PostCountry(CreateCountryDto countryDto)
+        public async Task<ActionResult<Country>> PostCountry([FromForm]CreateCountryDto countryDto)
         {
             var mapped = _mapper.Map<Country>(countryDto);
 

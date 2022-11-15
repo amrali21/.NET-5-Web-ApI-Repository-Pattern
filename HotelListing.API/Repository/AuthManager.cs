@@ -106,7 +106,6 @@ namespace HotelListing.API.Repository
                 expires: DateTime.Now.AddMinutes(Convert.ToInt32(_configuration
                 ["JwtSettings:DurationInMinutes"])),
                 signingCredentials: credentials
-
                 );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
